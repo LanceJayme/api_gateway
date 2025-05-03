@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Gateway Documentation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    h1, h2 { color: #2c3e50; }
+    code, pre { background-color: #f4f4f4; padding: 6px; display: block; border-radius: 4px; }
+    ul { line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>API Gateway Documentation</h1>
+  <p><strong>Base URL:</strong> <code>http://localhost/APIGateway/api/</code></p>
+  <p>All requests must include the header:</p>
+  <pre>X-API-Key: your_api_key_here</pre>
+
+  <hr>
+
+  <h2>GET /users</h2>
+  <p>Returns a list of users.</p>
+
+  <h3>Sample Request:</h3>
+  <pre>GET /api/users</pre>
+
+  <h3>Headers:</h3>
+  <pre>X-API-Key: key123</pre>
+
+  <h3>Sample Success Response (200 OK):</h3>
+  <pre>{
+  "users": [
+    {"id": 1, "name": "Alice"},
+    {"id": 2, "name": "Bob"}
+  ]
+}</pre>
+
+  <hr>
+
+  <h2>GET /products</h2>
+  <p>Returns a list of products.</p>
+
+  <h3>Sample Request:</h3>
+  <pre>GET /api/products</pre>
+
+  <h3>Headers:</h3>
+  <pre>X-API-Key: key123</pre>
+
+  <h3>Sample Success Response (200 OK):</h3>
+  <pre>{
+  "products": [
+    {"id": 101, "name": "Laptop"},
+    {"id": 102, "name": "Keyboard"}
+  ]
+}</pre>
+
+  <hr>
+
+  <h2>Error Responses</h2>
+  <ul>
+    <li><strong>401 Unauthorized</strong> – Missing or invalid API key</li>
+    <li><strong>429 Too Many Requests</strong> – Rate limit (10 requests per 60s) exceeded</li>
+    <li><strong>404 Not Found</strong> – Invalid endpoint</li>
+  </ul>
+
+</body>
+</html>

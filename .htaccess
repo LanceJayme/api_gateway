@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /APIGateway/
+
+# Route clean URLs like /api/users to gateway.php
+RewriteRule ^api/(.*)$ gateway.php?request_path=$1 [L,QSA]
+
+# Optional: Block direct access to service scripts
+RewriteRule ^services/.*$ - [F,L]
