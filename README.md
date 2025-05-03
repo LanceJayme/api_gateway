@@ -85,12 +85,14 @@ Value: key123
 Method: GET
 URL: http://localhost/my_api_gateway/api/users
 Headers: none
-🔁 Expected Response:
+
+Expected Response:
 { "error": "Invalid or missing API Key" }
 
 🔹 5. Rate Limit Test
 Send the same request (e.g., /api/products) more than 10 times in less than 60 seconds.
-After the 11th+ request, expect:
+After the 11th+ request, 
+expect:
 { "error": "Rate limit exceeded" }
 
 Documentation
@@ -101,17 +103,29 @@ Open http://localhost/my_api_gateway/analyze_log.php
 View stats: total requests, requests per key, status code counts, and most accessed paths.
 
 Challenges & Assumptions
+
 Used getallheaders() to retrieve custom headers.
+
 Switched from file-based to MySQL rate limiting for better scalability.
+
 Used include to simulate internal API calls for performance during response aggregation.
+
 Assumed backend services will check the optional X-Forwarded-By header for gateway identification.
 
 Bonus Tasks Completed
+
 ✅ MySQL Database for Keys/Rate Limiting
+
 Replaced arrays/files with SQL-based validation and rate tracking.
+
 ✅ Log Analysis Script
+
 analyze_log.php summarizes the log file in a browser-friendly format.
+
 ✅ Response Aggregation
+
 Added /api/dashboard to combine users and products data into one JSON response.
+
 ✅ Request Transformation
+
 Each request to backend services includes the custom header: X-Forwarded-By: MyPHPGateway
