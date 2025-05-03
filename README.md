@@ -59,6 +59,7 @@ APIGateway/
 | key456   | UserB  |
 
 Postman Collection Setup
+
 🔹 1. GET /api/users
 Method: GET
 URL: http://localhost/my_api_gateway/api/users
