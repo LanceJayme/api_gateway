@@ -98,7 +98,7 @@ expect:
 Documentation
 Visit http://localhost/my_api_gateway/docs.html to view the API documentation.
 
-og Analysis
+Log Analysis
 Open http://localhost/my_api_gateway/analyze_log.php
 View stats: total requests, requests per key, status code counts, and most accessed paths.
 
