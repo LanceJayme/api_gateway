@@ -39,17 +39,7 @@ This project is a simple API Gateway implemented in PHP. It validates API keys, 
          request_count INT
      );
 4. Project Structure:
-APIGateway/
-├── gateway.php
-├── docs.html
-├── analyze_log.php
-├── logs/
-│   └── gateway.log
-├── services/
-│   ├── service_users.php
-│   ├── service_products.php
-│   └── service_dashboard.php
-└── ratelimit_data/
+<pre> ```plaintext APIGateway/ ├── gateway.php ├── docs.html ├── analyze_log.php ├── logs/ │ └── gateway.log ├── services/ │ ├── service_users.php │ ├── service_products.php │ └── service_dashboard.php └── ratelimit_data/ ``` </pre>
 
 
  Valid API Keys
