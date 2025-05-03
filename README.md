@@ -104,13 +104,13 @@ View stats: total requests, requests per key, status code counts, and most acces
 
 Challenges & Assumptions
 
-Used getallheaders() to retrieve custom headers.
+- Used getallheaders() to retrieve custom headers.
 
-Switched from file-based to MySQL rate limiting for better scalability.
+- Switched from file-based to MySQL rate limiting for better scalability.
 
-Used include to simulate internal API calls for performance during response aggregation.
+- Used include to simulate internal API calls for performance during response aggregation.
 
-Assumed backend services will check the optional X-Forwarded-By header for gateway identification.
+- Assumed backend services will check the optional X-Forwarded-By header for gateway identification.
 
 Bonus Tasks Completed
 
